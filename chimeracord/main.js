@@ -28,7 +28,7 @@ function createWindow () {
 		/*Theming Support :D*/
 		var styles = 
 		\`
-		# Custom CSS Starts Here!
+		/* Custom CSS Starts Here! */
 		\`
 		
 			var styleSheet = document.createElement("style")
