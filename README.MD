@@ -1,4 +1,4 @@
-#ChimeraCord
+# ChimeraCord
 A native Discord client for FreeBSD, most likely works on others too!
 
 ## Installation
