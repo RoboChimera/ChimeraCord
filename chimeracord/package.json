@@ -1,0 +1,23 @@
+{
+  "name": "ChimeraCord",
+  "version": "0.1.0",
+  "description": "Chat with friends!",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron19 .",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "test": "echo \"Use 'npm start' instead!\" && npm start"
+  },
+  "keywords": [
+    "electron"
+  ],
+  "author": "RoboChimera",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+	  "electron": "^19.0.0"
+  },
+  "devDependencies": {
+	  "electron": "^19.0.0"
+  }
+}

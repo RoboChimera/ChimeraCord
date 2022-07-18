@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Version=0.1.0
+Name=Chimeracord
+Comment=Chat with Friends!
+Icon=/usr/local/share/chimeracord/src/icon.png
+Exec=/usr/local/bin/chimeracord
+Catagories=Internet
+StartupNotify=false
