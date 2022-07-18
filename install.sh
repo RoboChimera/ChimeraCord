@@ -1,5 +1,5 @@
 #!/bin/sh
-echo "Chimera Installer" &&
+echo "ChimeraCord Installer" &&
 echo "THIS REQUIRES ROOT!" &&
 pkg install electron19 www/npm node16 &&
 rm -rvf /usr/local/share/chimeracord &&
