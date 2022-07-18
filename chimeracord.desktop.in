@@ -5,5 +5,5 @@ Name=Chimeracord
 Comment=Chat with Friends!
 Icon=/usr/local/share/chimeracord/src/icon.png
 Exec=/usr/local/bin/chimeracord
-Categories=Internet
+Categories=Network
 StartupNotify=false
