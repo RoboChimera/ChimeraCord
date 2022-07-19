@@ -1,5 +1,5 @@
 # ChimeraCord
-A native Discord client for FreeBSD, most likely works on others too! To get audio to work, you'd have to configure pulseaudio or use some sort of translater.
+A native Discord client for FreeBSD, most likely works on others too! To get audio to work, audio seems to work without pulseaudio
 
 ## Installation
 	
