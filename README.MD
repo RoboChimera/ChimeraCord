@@ -14,7 +14,8 @@ A native Discord client for FreeBSD, most likely works on others too! To get aud
 	- Audio, Video
 	- Desktop Notifications
 	- Voice chat
-	- Custom Theming (chimeracord/main.js)
+	- Custom Theming with CSS (chimeracord/main.js)
+	- Custom Plugins with JS (chimeracord/main.js)
 	- Links open on external website
 
 ## Dependencies
