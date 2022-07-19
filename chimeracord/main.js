@@ -1,8 +1,8 @@
-const { app, BrowserWindow, Tray, nativeImage, Menu, shell, globalShortcut} = require('electron')
-const path = require('path')
-const userAgent = "Mozilla/5.0 (X11; Linux x86_64; FreeBSD amd64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36"
-let appQuiting = false
-let tray
+const { app, BrowserWindow, Tray, nativeImage, Menu, shell, globalShortcut} = require('electron');
+const path = require('path');
+const userAgent = "Mozilla/5.0 (X11; Linux x86_64; FreeBSD amd64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36";
+let appQuiting = false;
+let tray;
 
 function createWindow () {
 	Menu.setApplicationMenu(false)
@@ -19,9 +19,9 @@ function createWindow () {
 			nodeIntegration: true,
 		}
 	})
-	appQuiting = false
+	appQuiting = false;
 	win.webContents.setUserAgent(userAgent);
-	win.loadURL('https://discord.com/app')
+	win.loadURL('https://discord.com/app');
     	
 	win.webContents.executeJavaScript(
 	`
@@ -53,8 +53,8 @@ function createWindow () {
 		shell.openExternal(url);
 	})
 	
-	const icon = nativeImage.createFromPath('src/tray-icon.png')
-	tray = new Tray(icon)
+	const icon = nativeImage.createFromPath('src/tray-icon.png');
+	tray = new Tray(icon);
 	var contextMenu = Menu.buildFromTemplate([
 		{
 		 	label: "Open ChimeraCord", 
@@ -72,8 +72,8 @@ function createWindow () {
 		}
 	])
 	
-	tray.setContextMenu(contextMenu)
-	createWindow()
+	tray.setContextMenu(contextMenu);
+	createWindow();
 }
 
 app.whenReady().then(() => {
@@ -82,11 +82,11 @@ app.whenReady().then(() => {
 	    	app.quit();
 	})
 	
-	createWindow()
+	createWindow();
 })
 	
 app.on('activate', () => {
 	if (BrowserWindow.getAllWindows () .length === 0) {
-		createWindow()
+		createWindow();
 	}
 })
