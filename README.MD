@@ -17,7 +17,7 @@ A native Discord client for FreeBSD, most likely works on others too!
 	- Custom Theming with CSS (chimeracord/main.js)
 	- Custom Plugins with JS (chimeracord/main.js)
 	- Links open on external website
-	- Ctrl-Q to quit, good for DWM users!
+	- Ctrl-Q shortcut to quit, good for DWM users!
 
 ## Dependencies
 	(dependencies install themselves with ./install.sh)
