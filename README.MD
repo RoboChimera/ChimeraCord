@@ -12,6 +12,7 @@ A native Discord client for FreeBSD, most likely works on others too! To get aud
 ## Features
 	- Chat,
 	- Audio, Video
+	- Desktop Notifications
 	- Voice chat,
 	- Custom Theming (chimeracord/main.js)
 	- Links open on external website
