@@ -34,6 +34,8 @@ function createWindow () {
 			var styleSheet = document.createElement("style")
 			styleSheet.innerText = styles
 			document.head.appendChild(styleSheet)
+			
+			/* Custom JS Starts Here! */
 	`
 	)
 	
