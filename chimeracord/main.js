@@ -1,7 +1,7 @@
 const { app, BrowserWindow, Tray, nativeImage, Menu, shell, desktopCapturer} = require('electron')
 const path = require('path')
 const userAgent = "Mozilla/5.0 (X11; Linux x86_64; FreeBSD amd64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36"
-let WindowOpen = false
+let appQuiting = false
 let tray
 
 function createWindow () {
@@ -19,7 +19,7 @@ function createWindow () {
 			nodeIntegration: true,
 		}
 	})
-	WindowOpen = true
+	appQuiting = false
 	win.webContents.setUserAgent(userAgent);
 	win.loadURL('https://discord.com/app')
 	
@@ -40,10 +40,14 @@ function createWindow () {
 	)
 	
 	win.on('close', e => {
-		e.preventDefault()
-		win.hide()
+		if(appQuiting === false) {
+			e.preventDefault();
+			win.hide();
+		} else {
+			app.quit();
+		}
 	})
-	
+
 	win.webContents.on("new-window", function(event, url) {
 		event.preventDefault();
 		shell.openExternal(url);
@@ -55,12 +59,14 @@ function createWindow () {
 		{
 		 	label: "Open ChimeraCord", 
 			click() { 
+				appQuiting = false;
 				win.show();
 			}
 		},
 		{
 			label: "Quit ChimeraCord",
 			click() {
+				appQuiting = true;
 				app.quit();
 			}
 		}
@@ -72,10 +78,6 @@ function createWindow () {
 
 app.whenReady().then(() => {
 	createWindow()
-})
-
-app.on('window-all-closed', () => {
-	WindowOpen = false
 })
 	
 app.on('activate', () => {
