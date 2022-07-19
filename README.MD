@@ -13,15 +13,15 @@ A native Discord client for FreeBSD, most likely works on others too! To get aud
 	- Chat,
 	- Audio, Video
 	- Desktop Notifications
-	- Voice chat,
+	- Voice chat
 	- Custom Theming (chimeracord/main.js)
 	- Links open on external website
 
 ## Dependencies
 	(dependencies install themselves with ./install.sh)
-	- electron19
+	- devel/electron19
 	- www/npm
-	- node16
+	- www/node16
 
 ## Issues
 	- No Screen Recording.
