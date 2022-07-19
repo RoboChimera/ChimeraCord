@@ -64,7 +64,7 @@ function createWindow () {
 			}
 		},
 		{
-			label: "Quit ChimeraCord",
+			label: "Quit ChimeraCord (CTRL-Q)",
 			click() {
 				appQuiting = true;
 				app.quit();
