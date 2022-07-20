@@ -1,5 +1,5 @@
 # ChimeraCord
-A native Discord client for FreeBSD, most likely works on others too! To get audio to work, you'd have to configure pulseaudio or use some sort of translater.
+A native unofficial discord client for FreeBSD, most likely works on others too!
 
 ## Installation
 	
@@ -13,15 +13,17 @@ A native Discord client for FreeBSD, most likely works on others too! To get aud
 	- Chat,
 	- Audio, Video
 	- Desktop Notifications
-	- Voice chat,
-	- Custom Theming (chimeracord/main.js)
+	- Voice chat
+	- Custom Theming with CSS (chimeracord/main.js)
+	- Custom Plugins with JS (chimeracord/main.js)
 	- Links open on external website
+	- Ctrl-Q shortcut to quit, good for DWM users!
 
 ## Dependencies
 	(dependencies install themselves with ./install.sh)
-	- electron19
+	- devel/electron19
 	- www/npm
-	- node16
+	- www/node16
 
 ## Issues
 	- No Screen Recording.
