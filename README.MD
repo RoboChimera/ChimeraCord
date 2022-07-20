@@ -16,7 +16,7 @@ A native unofficial discord client for FreeBSD, most likely works on others too!
 	- Voice chat
 	- Custom Theming with CSS (chimeracord/main.js)
 	- Custom Plugins with JS (chimeracord/main.js)
-	- Links open on external website
+	- Links open on external website (discord webapp links open on webapp, for example, invite links or channel links)
 	- Ctrl-Q shortcut to quit, good for DWM users!
 
 ## Dependencies
