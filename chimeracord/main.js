@@ -64,7 +64,11 @@ function createWindow () {
 		
 		win.webContents.on("new-window", function(event, url) {
 			event.preventDefault();
-			shell.openExternal(url);
+			if(url != "https://discord.com/*") {
+				shell.openExternal(url);
+			} else {
+				win.load(url);
+			}
 		})
 			
 		const icon = nativeImage.createFromPath('src/tray-icon.png');
