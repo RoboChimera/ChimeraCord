@@ -1,4 +1,5 @@
 const { app, BrowserWindow, Tray, nativeImage, Menu, shell, globalShortcut} = require('electron');
+const contextMenu = require('electron-context-menu')
 const path = require('path');
 const userAgent = "Mozilla/5.0 (X11; Linux x86_64; FreeBSD amd64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36";
 const singleInstanceLock = app.requestSingleInstanceLock();
@@ -6,6 +7,13 @@ const singleInstanceLock = app.requestSingleInstanceLock();
 let win = null;
 let appQuiting = false;
 let tray;
+
+contextMenu({
+	showCopyImageAddress: true,
+	showSaveImageAs: true,
+    	showInspectElement: false,
+	showCopyImage: false
+})
 
 function createWindow () {
 	if(!singleInstanceLock) {
