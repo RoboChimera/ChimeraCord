@@ -104,13 +104,12 @@ function createWindow () {
 }
 
 app.whenReady().then(() => {
-    	globalShortcut.register('Ctrl+Q', () => {
-    		if(win.isFocused()) {
+	if(win.isFocused()) {
+		globalShortcut.register('Ctrl+Q', () => {
 			appQuiting = true;
-	    		app.quit();
-	    	}
-	})
-	
+			app.quit();
+		})
+	}
 	createWindow();
 })
 	
