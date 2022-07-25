@@ -9,10 +9,10 @@ let appQuiting = false;
 let tray;
 
 contextMenu({
-	showCopyImageAddress: true,
-	showSaveImageAs: true,
-    	showInspectElement: false,
-	showCopyImage: false
+    	showCopyImageAddress: true,
+    	showSaveImageAs: true,
+       	showInspectElement: false,
+ 	showCopyImage: false
 })
 
 function createWindow () {
@@ -103,13 +103,19 @@ function createWindow () {
 	}
 }
 
-app.whenReady().then(() => {
+function quitShortcutHandler() {
 	if(win.isFocused()) {
-		globalShortcut.register('Ctrl+Q', () => {
-			appQuiting = true;
-			app.quit();
-		})
+		appQuiting = true;
+		app.quit();
+	} else {
+		return;
 	}
+}
+    	
+app.whenReady().then(() => {
+		globalShortcut.register('Ctrl+Q', () => {
+		    quitShortcutHandler();
+		})
 	createWindow();
 })
 	
