@@ -13,7 +13,7 @@ fi
 
 echo "Installing NPM packages inside of /usr/local/share/chimeracord" &&
 cd /usr/local/share/chimeracord &&
-npm install -gf electron-context-menu &&
+npm install -f electron-context-menu &&
 if [ -f /usr/sbin/pkg ];  then
 	echo "FreeBSD package manager detected, dependencies will automatically install :)" &&
 	pkg install electron19 www/npm node16

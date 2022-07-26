@@ -15,7 +15,8 @@
   "author": "RoboChimera",
   "license": "BSD-2-Clause",
   "dependencies": {
-    "electron": "^19.0.0"
+    "electron": "^19.0.0",
+    "electron-context-menu": "^3.3.0"
   },
   "devDependencies": {
     "electron": "^19.0.0",
