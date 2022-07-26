@@ -23,11 +23,10 @@ function createWindow () {
 	} else {
 		app.on('second-instance', (event, commandLine, workingDirectory) => {
 			if (win) {
-				win.show()
+				win.show();
 			}
 		})
 		
-		Menu.setApplicationMenu(false)
 		win = new BrowserWindow({
 			autoHideMenuBar: true,
 			width: 1024,
@@ -82,7 +81,7 @@ function createWindow () {
 		const icon = nativeImage.createFromPath('src/tray-icon.png');
 		tray = new Tray(icon);
 		var contextMenu = Menu.buildFromTemplate([
-		{
+			{
 			 	label: "Open ChimeraCord", 
 				click() { 
 					appQuiting = false;
@@ -97,25 +96,12 @@ function createWindow () {
 				}
 			}
 		])
-		
+
 		tray.setContextMenu(contextMenu);
-		createWindow();
 	}
 }
 
-function quitShortcutHandler() {
-	if(win.isFocused()) {
-		appQuiting = true;
-		app.quit();
-	} else {
-		return;
-	}
-}
-    	
 app.whenReady().then(() => {
-		globalShortcut.register('Ctrl+Q', () => {
-		    quitShortcutHandler();
-		})
 	createWindow();
 })
 	

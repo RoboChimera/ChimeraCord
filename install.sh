@@ -11,5 +11,4 @@ chmod +x /usr/local/bin/chimeracord &&
 cp -vf chimeracord.desktop.in /usr/local/share/applications/chimeracord.desktop &&
 
 echo "Installing NPM packages inside of /usr/local/share/chimeracord" &&
-cd /usr/local/share/chimeracord &&
-npm install electron-context-menu
+npm install -gf electron-context-menu
