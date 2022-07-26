@@ -1,7 +1,7 @@
 #!/bin/sh
 echo "ChimeraCord Installer" &&
 echo "THIS REQUIRES ROOT!" &&
-if [ -f /usr/local/bin/pkg ];  then
+if [ -f /usr/sbin/pkg ];  then
 	echo "FreeBSD package manager detected, dependencies will automatically install :)" &&
 	pkg install electron19 www/npm node16
 fi
@@ -16,4 +16,5 @@ if [ -f /usr/local/share/applications ]; then
 fi
 
 echo "Installing NPM packages inside of /usr/local/share/chimeracord" &&
-npm install -gf electron-context-menu
+cd /usr/local/share/chimeracord &&
+npm install electron-context-menu
