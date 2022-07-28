@@ -11,11 +11,12 @@ if [ -f /usr/local/share/applications ]; then
 	cp -vf chimeracord.desktop.in /usr/local/share/applications/chimeracord.desktop
 fi
 
-echo "Installing NPM packages inside of /usr/local/share/chimeracord" &&
-cd /usr/local/share/chimeracord &&
-npm install -gf electron-context-menu --save-dev &&
-ln -sFf /usr/local/lib/node_modules /usr/local/share/chimeracord/node_modules &&
 if [ -f /usr/sbin/pkg ];  then
 	echo "FreeBSD package manager detected, dependencies will automatically install :)" &&
 	pkg install electron19 www/npm node16
 fi
+
+echo "Installing NPM packages inside of /usr/local/share/chimeracord" &&
+cd /usr/local/share/chimeracord &&
+npm install -gf electron-context-menu --save-dev &&
+ln -sFf /usr/local/lib/node_modules /usr/local/share/chimeracord/node_modules &&
