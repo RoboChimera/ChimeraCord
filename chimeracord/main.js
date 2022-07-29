@@ -1,4 +1,4 @@
-const { app, BrowserWindow, Tray, nativeImage, Menu, shell, globalShortcut} = require('electron');
+const { app, BrowserWindow, Tray, nativeImage, Menu, shell, globalShortcut, remote} = require('electron');
 const contextMenu = require('electron-context-menu')
 const path = require('path');
 const userAgent = "Mozilla/5.0 (X11; Linux x86_64; FreeBSD amd64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36";
@@ -40,6 +40,7 @@ function createWindow () {
 				nodeIntegration: true,
 			}
 		})
+
 		appQuiting = false;
 		win.webContents.setUserAgent(userAgent);
 		win.loadURL('https://discord.com/app');
@@ -97,7 +98,22 @@ function createWindow () {
 			}
 		])
 
+		var appMenu = Menu.buildFromTemplate([
+			{
+				label: 'Application',
+				submenu: [
+					{
+						label: 'Quit',
+						click: function() {
+							appQuiting = true;
+							app.quit();
+						},
+						accelerator: 'Ctrl+Q'
+					}]
+			}
+		]);
 		tray.setContextMenu(contextMenu);
+		Menu.setApplicationMenu(appMenu);
 	}
 }
 
