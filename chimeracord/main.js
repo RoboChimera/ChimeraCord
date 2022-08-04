@@ -33,8 +33,10 @@ function createWindow () {
 			height: 600,
 			minWidth: 940,
 			minHeight: 540,
+			backgroundColor: '#202225',
 			icon: 'src/icon.png',
 			title: "ChimeraCord",
+			defaultFontFamily: 'sansSerif',
 			webPrefrences: {
 				contextIsolation: true, 
 				nodeIntegration: true,
@@ -117,6 +119,7 @@ function createWindow () {
 	}
 }
 
+app.enableSandbox();
 app.whenReady().then(() => {
 	createWindow();
 })
