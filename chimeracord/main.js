@@ -4,9 +4,10 @@ const path = require('path');
 const userAgent = "Mozilla/5.0 (X11; Linux x86_64; FreeBSD amd64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36";
 const singleInstanceLock = app.requestSingleInstanceLock();
 
-let win = null;
 let appQuiting = false;
+let isDarkMode = true;
 let tray;
+let win;
 
 contextMenu({
     	showCopyImageAddress: true,
@@ -81,9 +82,7 @@ function createWindow () {
 			}
 		})
 			
-		const icon = nativeImage.createFromPath('src/tray-icon.png');
-		tray = new Tray(icon);
-		var contextMenu = Menu.buildFromTemplate([
+		var trayMenu = Menu.buildFromTemplate([
 			{
 			 	label: "Open ChimeraCord", 
 				click() { 
@@ -112,9 +111,38 @@ function createWindow () {
 						},
 						accelerator: 'Ctrl+Q'
 					}]
+			},
+			{
+				label: 'Settings',
+				submenu: [
+					{
+						label: 'Dark Mode',
+						type: 'checkbox',
+						click: function() {
+							tray.destroy();
+							if (isDarkMode == true) {
+								icon = nativeImage.createFromPath('src/tray-icon2.png');
+								isDarkMode = false;
+							} else {
+								icon = nativeImage.createFromPath('src/tray-icon.png');
+								isDarkMode = true;
+							}
+							tray = Tray(icon);
+							tray.setContextMenu(trayMenu);
+						}
+					}]
 			}
 		]);
-		tray.setContextMenu(contextMenu);
+		if (isDarkMode == true) {
+			icon = nativeImage.createFromPath('src/tray-icon.png');
+			appMenu.items[1].submenu.items[0].checked = true;
+		} else {
+			icon = nativeImage.createFromPath('src/tray-icon2.png');
+			appMenu.items[1].submenu.items[0].checked = false;
+		}
+
+		tray = Tray(icon);
+		tray.setContextMenu(trayMenu);
 		Menu.setApplicationMenu(appMenu);
 	}
 }
