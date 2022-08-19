@@ -1,13 +1,6 @@
 const { app, BrowserWindow, Tray, nativeImage, Menu, shell, globalShortcut, remote} = require('electron');
-const contextMenu = require('electron-context-menu')
-const path = require('path');
-const userAgent = "Mozilla/5.0 (X11; Linux x86_64; FreeBSD amd64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36";
-const singleInstanceLock = app.requestSingleInstanceLock();
-
-let appQuiting = false;
-let isDarkMode = true;
-let tray;
-let win;
+const contextMenu = require('electron-context-menu');
+const Store = require('electron-store');
 
 contextMenu({
     	showCopyImageAddress: true,
@@ -15,6 +8,22 @@ contextMenu({
        	showInspectElement: false,
  	showCopyImage: false
 })
+
+const storage = {
+	isDarkMode: {
+		type: 'boolean',
+		default: 'false'
+	}
+}
+
+const store = new Store(storage);
+const path = require('path');
+const userAgent = "Mozilla/5.0 (X11; Linux x86_64; FreeBSD amd64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36";
+const singleInstanceLock = app.requestSingleInstanceLock();
+
+let appQuiting = false;
+let tray;
+let win;
 
 function createWindow () {
 	if(!singleInstanceLock) {
@@ -122,10 +131,10 @@ function createWindow () {
 							tray.destroy();
 							if (isDarkMode == true) {
 								icon = nativeImage.createFromPath('src/tray-icon2.png');
-								isDarkMode = false;
+								store.set('isDarkMode', false);
 							} else {
 								icon = nativeImage.createFromPath('src/tray-icon.png');
-								isDarkMode = true;
+								store.set('isDarkMode', true);
 							}
 							tray = Tray(icon);
 							tray.setContextMenu(trayMenu);
@@ -133,14 +142,14 @@ function createWindow () {
 					}]
 			}
 		]);
-		if (isDarkMode == true) {
+		if (store.get('isDarkMode') == true) {
 			icon = nativeImage.createFromPath('src/tray-icon.png');
 			appMenu.items[1].submenu.items[0].checked = true;
 		} else {
 			icon = nativeImage.createFromPath('src/tray-icon2.png');
 			appMenu.items[1].submenu.items[0].checked = false;
 		}
-
+		console.log('User changed Dark Mode to: ', store.get('isDarkMode'));
 		tray = Tray(icon);
 		tray.setContextMenu(trayMenu);
 		Menu.setApplicationMenu(appMenu);
