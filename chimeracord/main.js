@@ -129,7 +129,7 @@ function createWindow () {
 						type: 'checkbox',
 						click: function() {
 							tray.destroy();
-							if (isDarkMode == true) {
+							if (store.get('isDarkMode') == true) {
 								icon = nativeImage.createFromPath('src/tray-icon2.png');
 								store.set('isDarkMode', false);
 							} else {
@@ -138,6 +138,7 @@ function createWindow () {
 							}
 							tray = Tray(icon);
 							tray.setContextMenu(trayMenu);
+							console.log('User Changed Dark Mode to ', store.get('isDarkMode'));
 						}
 					}]
 			}
@@ -149,7 +150,7 @@ function createWindow () {
 			icon = nativeImage.createFromPath('src/tray-icon2.png');
 			appMenu.items[1].submenu.items[0].checked = false;
 		}
-		console.log('User changed Dark Mode to: ', store.get('isDarkMode'));
+		console.log('Dark Mode: ', store.get('isDarkMode'));
 		tray = Tray(icon);
 		tray.setContextMenu(trayMenu);
 		Menu.setApplicationMenu(appMenu);
