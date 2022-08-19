@@ -20,6 +20,4 @@ fi
 echo "Installing NPM packages inside of /usr/local/share/chimeracord" &&
 cd /usr/local/share/chimeracord &&
 npm install -gf electron-context-menu electron-store --save-dev &&
-mkdir /usr/local/share/chimeracord/node_modules &&
-mv /usr/local/lib/node_modules/electron-context-menu /usr/local/share/chimeracord/node_modules/electron-context-menu &&
-mv /usr/local/lib/node_modules/electron-store /usr/local/share/chimeracord/node_modules/electron-store
+ln -sFf /usr/local/lib/node_modules /usr/local/share/chimeracord/
