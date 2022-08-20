@@ -30,7 +30,6 @@ let win;
 function darkMode() {
 	if (store.get('isDarkMode') == false) {
 		icon = nativeImage.createFromPath('src/tray-icon2.png');
-		store.set('isDarkMode', false);
 		win.webContents.executeJavaScript(
 		`
 			var styles =
@@ -114,7 +113,6 @@ function darkMode() {
 		)
 	} else {
 		icon = nativeImage.createFromPath('src/tray-icon.png');
-		store.set('isDarkMode', true);
 		win.webContents.executeJavaScript(
 		`
 			var styles =
@@ -241,7 +239,7 @@ function createWindow() {
 					color: var(--header-secondary);
 				}
 
-				.children-3xh0VB:after {
+				.children-3xh0VB:after, video.ready-3BZNWT, .scroller-3X7KbA.none-2-_0dP.scrollerBase-_bVAAt:nth-last-child(2) > .listItem-3SmSlK:nth-child(6), .scroller-3X7KbA.none-2-_0dP.scrollerBase-_bVAAt:nth-last-child(2) > .listItem-3SmSlK:nth-child(7), #appearance-tab div.marginTop8-24uXGp:nth-child(2) {
 					display: none;
 				}
 				
@@ -249,7 +247,7 @@ function createWindow() {
 					color: var(--text-mention);
 				}
 
-				div.formNotice-2nS8ey,.connectedAccounts-Jb3L2,.codeRedemptionRedirect-2hYMSQ.card-16VQ8C,.select-1Ia3hD.lookFilled-1GseHa  {
+				div.formNotice-2nS8ey,.connectedAccounts-Jb3L2,.codeRedemptionRedirect-2hYMSQ.card-16VQ8C,.select-1Ia3hD.lookFilled-1GseHa,form.authBoxExpanded-AN2aH1.authBox-1HR6Ha,section.authBox-1HR6Ha.theme-dark.chooseAccountAuthBox-Udr8ty {
 					background-color: var(--background-floating);
 					border-color: var(--background-accent);
 				}
@@ -259,7 +257,7 @@ function createWindow() {
 				}
 
 				.input-2g-os5.multiInput-1VARjC,.inputDefault-3FGxgL {
-					background: var(--background-floating);
+					background: var(--background-secondary);
 				}
 
 				button.fieldButton-14lHvK.removeButton-v6eolJ.button-f2h6uQ.lookLink-15mFoz.lowSaturationUnderline-Z6CW6z.colorPrimary-2AuQVo.sizeSmall-wU2dO-.grow-2sR_-F {
@@ -269,7 +267,19 @@ function createWindow() {
 				div.markup-eYLPri.editor-H2NA06.slateTextArea-27tjG0.fontSize16Padding-XoMpjI.textAreaWithoutAttachmentButton-1as0NS {
 					background-color: var(--background-secondary);
 				}
-				
+
+				div.tipTitle-3FYEQp {
+					color: var(--header-primary);
+					font-size: 30px;
+					margin-bottom: 1.2%;
+				}
+
+				div.tip-1AwED_ {
+					color: var(--header-secondary);
+					font-size: 15px;
+					margin-top: 7%;
+				}
+
 				.theme-dark, .theme-light .contentWarningPopout-WKdbDG {
 					background-color: var(--activity-card-background);
 					-webkit-box-shadow: 0 2px 10px 0 rgba(28,36,43,.6);
@@ -553,7 +563,7 @@ function createWindow() {
 		)
 		win.loadURL('https://discord.com/app');
     		
-		//win.webContents.openDevTools();
+		win.webContents.openDevTools();
 		win.on('close', e => {
 			if(appQuiting === false) {
 				e.preventDefault();
@@ -621,7 +631,8 @@ function createWindow() {
 							tray.setContextMenu(trayMenu);
 							console.log('User Changed Dark Mode to ', store.get('isDarkMode'));
 						}
-					}]
+					}
+				]
 			}
 		]);
 
