@@ -105,324 +105,12 @@ function darkMode() {
 					--background-modal: #fbfbfb;
 					--background-footer: #ebebeb;
 				}
-
-				.theme-dark, .theme-light .container-ZMc96U {
-					background-color: var(--background-primary);
-				}
-
-				.children-3xh0VB h3 {
-					color: var(--header-secondary);
-				}
-
-				.children-3xh0VB:after {
-					display: none;
-				}
-				
-				span.mention.wrapper-1ZcZW-.interactive {
-					color: var(--text-mention);
-				}
-
-				div.formNotice-2nS8ey,.connectedAccounts-Jb3L2,.codeRedemptionRedirect-2hYMSQ.card-16VQ8C,.select-1Ia3hD.lookFilled-1GseHa  {
-					background-color: var(--background-floating);
-					border-color: var(--background-accent);
-				}
-
-				div.codeRedemptionRedirect-2hYMSQ.card-16VQ8C {
-					color: var(--text-muted);
-				}
-
-				.input-2g-os5.multiInput-1VARjC,.inputDefault-3FGxgL {
-					background: var(--background-floating);
-				}
-
-				button.fieldButton-14lHvK.removeButton-v6eolJ.button-f2h6uQ.lookLink-15mFoz.lowSaturationUnderline-Z6CW6z.colorPrimary-2AuQVo.sizeSmall-wU2dO-.grow-2sR_-F {
-					background-color: #cc1531;
-				}
-
-				div.markup-eYLPri.editor-H2NA06.slateTextArea-27tjG0.fontSize16Padding-XoMpjI.textAreaWithoutAttachmentButton-1as0NS {
-					background-color: var(--background-secondary);
-				}
-				
-				.theme-dark, .theme-light .contentWarningPopout-WKdbDG {
-					background-color: var(--activity-card-background);
-					-webkit-box-shadow: 0 2px 10px 0 rgba(28,36,43,.6);
-					box-shadow: 0 2px 10px 0 rgba(28,36,43,.6);
-				}
-	
-				input.input-3r5zZY {
-					background-color: var(--background-accent);
-				}
-				.search-25t1e9 .searchBox-31Zv9h .searchBoxInput-3h4etz {
-					font-size: 16px;
-					padding: 8px;
-					color: var(--text-normal);
-				}
-	
-				.autocompleteScroller-3L6kmy {
-					background-color: var(--background-secondary-alt)
-				}
-	
-				.theme-dark, .theme-light .message-G6O-Wv {
-					background-color: var(--background-secondary);
-					-webkit-box-shadow: 0 0 0 1px rgba(32,34,37,.6),0 2px 10px 0 rgba(0,0,0,.2);
-					box-shadow: 0 0 0 1px rgba(32,34,37,.6),0 2px 10px 0 rgba(0,0,0,.2);
-				}
-
-				.theme-dark, .theme-light .autocompleteArrow-jJE9TQ, .theme-dark, .theme-light .header-3i_Csh {
-					background-color: var(--background-modal);
-				}
-
-				.theme-dark, .theme-light .tierBody-1d3UiS {
-					background-color: var(--background-secondary);
-					color: #b9bbbe;
-				}
-
-				.theme-dark, .theme-light .searchBox-pyIJJj {
-					background-color: var(--background-secondary);
-					-webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.2);
-					box-shadow: 0 2px 5px 0 rgba(0,0,0,.2);
-					color: var(--text-normal);
-				}
-
-				.backButton-2Ps-B8 {
-					height: 38px;
-					margin-right: auto;
-					color: var(--text-normal);
-				}
-
-				.theme-dark, .theme-light .pageWrapper-2PwDoS {
-					background-color: var(--background-primary);
-					color: #fff;
-				}
-
-				.avatarUploaderInnerSquareDisabled-e_U2MZ {
-					background-color: var(--background-accent);
-					background-image: none;
-				}
-
-				.peopleColumn-1wMU14 {
-					display: -webkit-box;
-					display: -ms-flexbox;
-					display: flex;
-					-webkit-box-orient: vertical;
-					-webkit-box-direction: normal;
-					-ms-flex-direction: column;
-					flex-direction: column;
-					-webkit-box-flex: 1;
-					-ms-flex: 1 1 auto;
-					flex: 1 1 auto;
-					overflow: hidden;
-					background-color: var(--background-primary);
-				}
-
-				.theme-dark, .theme-light .lookFilled-yCfaCM.colorGrey-2iAG-B {
-					color: #fff;
-					background-color: var(--background-accent);
-				}
-
-				.scroller-18M1mG {
-					padding-bottom: 8px;
-					background-color: var(--background-secondary);
-				}
-
-				input.input-2VB9rf {
-					background-color: var(--background-primary);
-				}
-
-				.theme-dark, .theme-light .colorPickerCustom-1swUKF {
-					background: var(--background-secondary-alt);
-					border-color: #202225;
-				}
-
-				.theme-dark, .theme-light .quickSelectPopout-2F0PXw {
-					background: var(--background-tertiary);
-					color: #f6f6f7;
-				}
-
-				.theme-dark, .theme-light .codeRedemptionRedirect-3SBiCp {
-					color: #fff;
-					background-color: var(--activity-card-background);
-					border-color: #202225;
-				}
-
-				.connectionHeader-2rV1ze {
-					position: relative;
-					display: grid;
-					grid-template-columns: auto 1fr auto;
-					padding: 20px;
-					background: #202024;
-					border-radius: 8px 8px 0 0;
-				}
-
-				.accountList-305sx3 {
-					padding: 20px 20px 12px;
-					background-color: #212124;
-					border-radius: 8px;
-				}
-
-				.theme-dark, .theme-light .footer-VCsJQY {
-					background-color: var(--background-footer);
-					-webkit-box-shadow: inset 0 1px 0 rgba(47,49,54,.6);
-					box-shadow: inset 0 1px 0 rgba(47,49,54,.6);
-				}
-
-				#uid_17 {
-					background-color: var(--background-secondary);
-				}
-
-				#uid_17--1 {
-					background-color: var(--background-tertiary);
-				}
-
-				.datePicker-70cO23 {
-					background-color: var(--background-secondary);
-				}
-
-				.theme-dark, .theme-light .container-KM8BU6, .theme-dark, .theme-light .reactors-1VXca7 {
-					background-color: var(--background-secondary-alt);
-				}
-
-				.react-datepicker {
-					background-color: var(--background-secondary);
-				}
-
-				.theme-dark, .theme-light .selected-3H3-RC {
-					background-color: var(--background-accent);
-				}
-
-				scroller-2GkvCq thin-31rlnD scrollerBase-_bVAAt fade-1R6FHN {
-					background-color: var(--background-footer);
-				}
-
-				.scroller-2MALzE.list-2u03C-.thin-31rlnD.scrollerBase-_bVAAt {
-					background-color: var(--background-secondary);
-				}
-
-				.categoryHeader-OpJ1Ly {
-					position: sticky;
-					top: 0;
-					padding: 0 8px;
-					background-color: var(--background-secondary);
-				}
-
-				.theme-dark, .theme-light .root-g14mjS {
-					background-color: var(--background-modal);
-					-webkit-box-shadow: 0 0 0 1px rgba(32,34,37,.6),0 2px 10px 0 rgba(0,0,0,.2);
-					box-shadow: 0 0 0 1px rgba(32,34,37,.6),0 2px 10px 0 rgba(0,0,0,.2);
-				}
-
-				.theme-dark, .theme-light .footer-31IekZ {
-					background-color: var(--background-footer);
-					-webkit-box-shadow: inset 0 1px 0 rgba(47,49,54,.6);
-					box-shadow: inset 0 1px 0 rgba(47,49,54,.6);
-				}
-
-				.search-1iTphC .searchBox-2_mAlO .searchBoxInput-K6mkng {
-					font-size: 16px;
-					padding: 8px;
-					color: var(--text-normal);
-				}
-
-				.theme-dark, .theme-light .autocompleteArrow-Zxoy9H, .theme-dark, .theme-light .header-2bNvm4 {
-					background-color: var(--background-footer);
-				}
-
-				.theme-dark, .theme-light .container-VSDcQc .sectionTag-pXyto9 {
-					background-color: var(--background-modal);
-					color: #72767d;
-				}
-
-				.theme-dark, .theme-light .root-1gCeng {
-					background-color: var(--background-modal);
-					-webkit-box-shadow: 0 0 0 1px rgba(32,34,37,.6),0 2px 10px 0 rgba(0,0,0,.2);
-					box-shadow: 0 0 0 1px rgba(32,34,37,.6),0 2px 10px 0 rgba(0,0,0,.2);
-				}
-
-				.theme-dark, .theme-light .pageWrapper-1PgVDX {
-					background-color: var(--background-secondary-accent);
-					color: #fff;
-				}
-
-				.theme-dark, .theme-light .searchBox-3Y2Vi7 {
-					background-color: var(--background-secondary);
-					-webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.2);
-					box-shadow: 0 2px 5px 0 rgba(0,0,0,.2);
-				}
-
-				.theme-dark, .theme-light .uploadModal-2ifh8j {
-					background-color: var(--background-modal);
-					-webkit-box-shadow: 0 0 0 1px rgba(32,34,37,.6),0 2px 10px 0 rgba(0,0,0,.2);
-					box-shadow: 0 0 0 1px rgba(32,34,37,.6),0 2px 10px 0 rgba(0,0,0,.2);
-				}
-
-				.theme-dark, .theme-light .body-3PNusm {
-					background-color: var(--background-accent);
-					color: #b9bbbe;
-				}
-
-				.peopleColumn-29fq28 {
-					display: -webkit-box;
-					display: -ms-flexbox;
-					display: flex;
-					-webkit-box-orient: vertical;
-					-webkit-box-direction: normal;
-					-ms-flex-direction: column;
-					flex-direction: column;
-					-webkit-box-flex: 1;
-					-ms-flex: 1 1 auto;
-					flex: 1 1 auto;
-					overflow: hidden;
-					background-color: var(--background-primary);
-				}
-
-				.theme-dark, .theme-light .message-2qRu38 {
-					background-color: var(--background-modal);
-					-webkit-box-shadow: 0 0 0 1px rgba(32,34,37,.6),0 2px 10px 0 rgba(0,0,0,.2);
-					box-shadow: 0 0 0 1px rgba(32,34,37,.6),0 2px 10px 0 rgba(0,0,0,.2);
-				}
-
-				peopleColumn-1wMU14 .theme-dark, .theme-light .footer-3mqk7D {
-					background-color: var(--background-footer);
-					-webkit-box-shadow: inset 0 1px 0 rgba(47,49,54,.6);
-					box-shadow: inset 0 1px 0 rgba(47,49,54,.6);
-				}
-
-				ul.resultsGroup-1BPR25 {
-					background-color: var(--background-secondary)
-				}
-
-				.theme-dark, .theme-light .footer-2gL1pp {
-					background-color: var(--background-footer);
-					-webkit-box-shadow: inset 0 1px 0 rgba(47,49,54,.6);
-					box-shadow: inset 0 1px 0 rgba(47,49,54,.6);
-				}
-
-				.theme-dark, .theme-light .autocomplete-1vrmpx {
-					background-color: #1f2124;
-				}
-
-				.theme-dark, .theme-light .selected-1Tbx07 {
-					background-color: #303235;
-				}
-
-				body {
-					line-height: 1;
-					margin: 0;
-					padding: 0;
-					font-family: var(--font-primary);
-					overflow: hidden;
-					-webkit-user-select: none;
-					-moz-user-select: none;
-					-ms-user-select: none;
-					user-select: none;
-					background: var(--background-primary);
-				}
 			\`
 
 			var styleSheet = document.createElement("style")
 			styleSheet.innerText = styles
 			document.head.appendChild(styleSheet)
-			`
+		`
 		)
 	} else {
 		icon = nativeImage.createFromPath('src/tray-icon.png');
@@ -501,7 +189,50 @@ function darkMode() {
 					--background-modal: #171718;
 					--background-footer: #131314;
 				}
+			\`
 
+			var styleSheet = document.createElement("style")
+			styleSheet.innerText = styles
+			document.head.appendChild(styleSheet)
+		`
+		)
+	}
+}
+
+function createWindow() {
+	if(!singleInstanceLock) {
+		appQuiting = true;
+		app.quit();
+		
+	} else {
+		app.on('second-instance', (event, commandLine, workingDirectory) => {
+			if (win) {
+				win.show();
+			}
+		})
+		
+		win = new BrowserWindow({
+			autoHideMenuBar: true,
+			width: 1024,
+			height: 600,
+			minWidth: 940,
+			minHeight: 540,
+			backgroundColor: '#202225',
+			icon: 'src/icon.png',
+			title: "ChimeraCord",
+			defaultFontFamily: 'sansSerif',
+			webPrefrences: {
+				contextIsolation: true, 
+				nodeIntegration: true,
+			}
+		})
+
+		appQuiting = false;
+		win.webContents.setUserAgent(userAgent);
+		win.webContents.executeJavaScript(
+		`
+			var styles =
+			\`
 				.theme-dark, .theme-light .container-ZMc96U {
 					background-color: var(--background-primary);
 				}
@@ -538,7 +269,7 @@ function darkMode() {
 				div.markup-eYLPri.editor-H2NA06.slateTextArea-27tjG0.fontSize16Padding-XoMpjI.textAreaWithoutAttachmentButton-1as0NS {
 					background-color: var(--background-secondary);
 				}
-
+				
 				.theme-dark, .theme-light .contentWarningPopout-WKdbDG {
 					background-color: var(--activity-card-background);
 					-webkit-box-shadow: 0 2px 10px 0 rgba(28,36,43,.6);
@@ -818,41 +549,8 @@ function darkMode() {
 			var styleSheet = document.createElement("style")
 			styleSheet.innerText = styles
 			document.head.appendChild(styleSheet)
-			`
+		`
 		)
-	}
-}
-
-function createWindow() {
-	if(!singleInstanceLock) {
-		appQuiting = true;
-		app.quit();
-		
-	} else {
-		app.on('second-instance', (event, commandLine, workingDirectory) => {
-			if (win) {
-				win.show();
-			}
-		})
-		
-		win = new BrowserWindow({
-			autoHideMenuBar: true,
-			width: 1024,
-			height: 600,
-			minWidth: 940,
-			minHeight: 540,
-			backgroundColor: '#202225',
-			icon: 'src/icon.png',
-			title: "ChimeraCord",
-			defaultFontFamily: 'sansSerif',
-			webPrefrences: {
-				contextIsolation: true, 
-				nodeIntegration: true,
-			}
-		})
-
-		appQuiting = false;
-		win.webContents.setUserAgent(userAgent);
 		win.loadURL('https://discord.com/app');
     		
 		//win.webContents.openDevTools();
