@@ -563,7 +563,7 @@ function createWindow() {
 		)
 		win.loadURL('https://discord.com/app');
     		
-		win.webContents.openDevTools();
+		//win.webContents.openDevTools();
 		win.on('close', e => {
 			if(appQuiting === false) {
 				e.preventDefault();
