@@ -312,8 +312,12 @@ function initWindow() {
 				--parent-color-itemCard-3ETziu-wrapper-2RrXDg-outer-2JOHae-padded-2NSY6O-interactive-2zD88a: var(--background-tertiary);
 			}
 
-			div.itemCard-3Etziu.wrapper-2RrXDg.outer-2JOHae.padded-2NSY6O.interactive-2zD88a div.body-16rSsp.inset-SbsSFp section.section-3G9aLW {
+			div.itemCard-3Etziu.wrapper-2RrXDg.outer-2JOHae.padded-2NSY6O.interactive-2zD88a div.body-16rSsp section.section-3G9aLW {
 				background-color: var(--parent-color-itemCard-3ETziu-wrapper-2RrXDg-outer-2JOHae-padded-2NSY6O-interactive-2zD88a);
+			}
+
+			div.itemCard-3Etziu.wrapper-2RrXDg.outer-2JOHae.padded-2NSY6O.interactive-2zD88a .inset-SbsSFp {
+				background-color: #0000;
 			}
 
 			div.peopleListItem-u6dGxF {
