@@ -285,7 +285,7 @@ function initWindow() {
 				background-color: var(--background-primary);
 			}
 
-			div.item-3mHhwr.item-3XjbnG.selected-g-kMVV.themed-2-lozF {
+			div.item-3mHhwr.item-3XjbnG.selected-g-kMVV.themed-2-lozF, div.item-3mHhwr.item-3XjbnG.selected-g-kMVV.themed-2-lozF:hover {
 				background-color: #0000;
 				color: var(--text-normal);
 				font-weight: 1000;
@@ -294,6 +294,7 @@ function initWindow() {
 			div.item-3mHhwr.item-3XjbnG.themed-2-lozF:hover {
 				background-color: #0000;
 				color: var(--text-normal);
+				font-weight: 600;
 			}
 
 			button.button-f2h6uQ.lookLink-15mFoz.lowSaturationUnderline-Z6CW6z.colorPrimary-2AuQVo.sizeMedium-2bFIHr.grow-2sR_-F {
