@@ -221,7 +221,7 @@ function initWindow() {
 			}
 
 			div.formNotice-2nS8ey,.connectedAccounts-Jb3L2,.codeRedemptionRedirect-2hYMSQ.card-16VQ8C,.select-1Ia3hD.lookFilled-1GseHa,form.authBoxExpanded-AN2aH1.authBox-1HR6Ha,section.authBox-1HR6Ha.theme-dark.chooseAccountAuthBox-Udr8ty {
-				background-color: var(--background-floating);
+				background-color: var(--background-secondary);
 				border-color: var(--background-accent);
 			}
 
@@ -230,7 +230,7 @@ function initWindow() {
 			}
 
 			.input-2g-os5.multiInput-1VARjC,.inputDefault-3FGxgL {
-				background: var(--background-secondary);
+				background: var(--background-floating);
 			}
 
 			button.fieldButton-14lHvK.removeButton-v6eolJ.button-f2h6uQ.lookLink-15mFoz.lowSaturationUnderline-Z6CW6z.colorPrimary-2AuQVo.sizeSmall-wU2dO-.grow-2sR_-F {
