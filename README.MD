@@ -21,8 +21,8 @@ This should work on any linux distro/freeBSD derivative... proper freeBSD packag
 	- Ctrl-Q shortcut to quit.
 ```
 ## Dependencies
+On freeBSD, the dependencies install by themselves using install.sh, for others, you are going to have to install manually.
 ```
-	(dependencies install themselves with ./install.sh)
 	- devel/electron19
 	- www/npm
 	- www/node16
