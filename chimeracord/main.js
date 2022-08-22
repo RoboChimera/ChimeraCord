@@ -28,7 +28,7 @@ let win;
 app.enableSandbox();
 
 function darkMode() {
-	if (store.get('isDarkMode') == false) {
+	if (!store.get('isDarkMode')) {
 		icon = nativeImage.createFromPath('src/tray-icon2.png');
 		win.webContents.executeJavaScript(
 		`
@@ -197,9 +197,7 @@ function darkMode() {
 	}
 }
 
-function initWindow() {
-	appQuiting = false;
-	win.webContents.setUserAgent(userAgent);
+function loadPage(givenURL) {
 	win.webContents.executeJavaScript(
 	`
 		var styles =
@@ -614,27 +612,33 @@ function initWindow() {
 		document.head.appendChild(styleSheet)
 	`
 	)
-	win.loadURL('https://discord.com/app');
+	win.loadURL(givenURL);
+}
+
+function initWindow() {
+	appQuiting = false;
+	win.webContents.setUserAgent(userAgent);
+	loadPage('https://discord.com/app');
 	
 	//win.webContents.openDevTools();
 	win.on('close', e => {
-		if(appQuiting === false) {
+		if(!appQuiting) {
 			e.preventDefault();
 			win.hide();
 		} else {
 			app.quit();
 		}
 	})
-	
+
 	win.webContents.on("new-window", function(event, url) {
 		event.preventDefault();
-		if(url != "https://discord.com/*") {
+		if(!url.startsWith("https://discord.com/")) {
 			shell.openExternal(url);
 		} else {
-			win.load(url);
+			return;
 		}
 	})
-		
+	
 	var trayMenu = Menu.buildFromTemplate([
 		{
 			label: "Open ChimeraCord", 
@@ -673,11 +677,7 @@ function initWindow() {
 					type: 'checkbox',
 					click: function() {
 						tray.destroy();
-						if (store.get('isDarkMode') == true) {
-							store.set('isDarkMode', false);
-						} else {
-							store.set('isDarkMode', true);
-						}
+						store.set('isDarkMode', !store.get('isDarkMode'));
 						darkMode();
 						
 						tray = Tray(icon);
@@ -688,7 +688,7 @@ function initWindow() {
 		}
 	]);
 
-	if (store.get('isDarkMode') == true) {
+	if (store.get('isDarkMode')) {
 		appMenu.items[1].submenu.items[0].checked = true;
 	} else {
 		appMenu.items[1].submenu.items[0].checked = false;
@@ -725,7 +725,7 @@ function createWindow() {
 			defaultFontFamily: 'sansSerif',
 			webPrefrences: {
 				contextIsolation: true, 
-				nodeIntegration: true,
+				nodeIntegration: true
 			}
 		})
 
