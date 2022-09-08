@@ -4,7 +4,7 @@
   "description": "Chat with friends!",
   "main": "main.js",
   "scripts": {
-    "start": "electron19 .",
+    "start": "electron .",
     "package": "electron-forge package",
     "make": "electron-forge make",
     "test": "echo \"Use 'npm start' instead!\" && npm start"
