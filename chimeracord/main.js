@@ -38,7 +38,7 @@ function initWindow() {
 	win.webContents.setUserAgent(userAgent);
 	loadPage('https://discord.com/app');
 	
-	win.webContents.openDevTools();
+	//win.webContents.openDevTools();
 	win.on('close', event => {
 		if(!appQuiting) {
 			event.preventDefault();
