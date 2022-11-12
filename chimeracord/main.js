@@ -38,7 +38,7 @@ function initWindow() {
 	win.webContents.setUserAgent(userAgent);
 	loadPage('https://discord.com/app');
 	
-	//win.webContents.openDevTools();
+	win.webContents.openDevTools();
 	win.on('close', event => {
 		if(!appQuiting) {
 			event.preventDefault();
@@ -101,8 +101,6 @@ function initWindow() {
 					click: function() {
 						tray.destroy();
 						store.set('isDarkMode', !store.get('isDarkMode'));
-						theming.darkMode(store.get('isDarkMode'), win);
-
 						if (store.get('isDarkMode')) {
 							appMenu.items[1].submenu.items[0].checked = true;
 							icon = nativeImage.createFromPath('src/tray-icon.png')
@@ -127,7 +125,6 @@ function initWindow() {
 		icon = nativeImage.createFromPath('src/tray-icon2.png')
 	}
 
-	theming.darkMode(store.get('isDarkMode'), win);
 	tray = Tray(icon);
 	tray.setContextMenu(trayMenu);
 	Menu.setApplicationMenu(appMenu);
